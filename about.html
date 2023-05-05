@@ -1,0 +1,166 @@
+<!--DOCUMENT SETUP-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+<!--NAVIGATION BAR-->
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+  <header>
+  <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  <nav class="nav_links">
+    <input type="checkbox" class="toggle-menu">
+    <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </header>
+<!--END NAVIGATION BAR-->
+  <main>
+<!--ABOUT PAGE FLEXBOX GRID 1 // PARENT: ab_grid // CHILD: ab_lcolumn & ab_rcolumn-->
+    <div class="ab_grid">
+      <!--LEFT COLUMN 1-->
+      <div class="ab_lcolumn">
+      <h1>ABOUT ME</h1>
+        <!--PROFILE BOX-->
+        <div class="profile">
+          <div class="profile_img">
+              <img class="image" src="images/profile1.jpeg" alt="image" height="200" width="200">
+          </div>
+          <div class="profile_cont">
+            <p>
+              <strong>JOSEPHINE H. WIDJAJA</strong>
+              <br>
+              <em>Research Assistant</em>
+            </p>
+              <ul>
+                <li>Developed and designed base and rod 3D models along with corresponding prototypes</li>
+                <li>Synthesized custom electronics circuit and microcontroller based programs</li>
+                <li>Managed project timeline and facilitated creation of custom rotarod device</li>
+              </ul>
+            
+          </div>
+        </div>
+        <!--END PROFILE BOX-->
+        <!--CONTACT BOX-->
+        <div class="abwhite_border">
+          <div class="abgold_border">
+              <div class="section">
+                <h2>CONTACT</h2>
+          
+                  <div class="abcontact">
+                  Email: <a href="mailto:jwidjaja@augusta.edu">jwidjaja@augusta.edu</a>
+                  <br>
+                  LinkedIn: <a href="https://www.linkedin.com/in/josephine-widjaja-2002" target="_blank">Josephine Widjaja</a>
+                  <br>
+                  Faculty Page: <a href="https://www.augusta.edu/mcg/phmtox/brian-muntean-phd.php" target="_blank">Dr. Brian Muntean</a>
+                  </div>
+          
+                <h2>ACKNOWELDGEMENT</h2>
+                <p>
+                  We are very thankful to William Gray, manager of educational technology at Augusta University, who helped synthesize 3D-printed components. We are very thankful to Luke Steel, makerspace specialist at the Georgia Cyber Center, for assistance with laser cutting tools used for base assembly fabrication.
+                </p>
+              </div>
+          </div>
+        </div>  
+        <!--END CONTACT BOX-->
+      </div>
+      <!--END LEFT COLUMN 1-->
+      <!--START RIGHT COLUMN 1-->
+      <div class="ab_rcolumn">
+        <h1>CONTRIBUTORS</h1>
+        <!--PROFILE BOX 1-->
+        <div class="profile">
+          <div class="profile_img">
+             <img class="image" src="images/profile2.png" alt="image" height="200" width="200">
+          </div>
+          <div class="profile_cont">
+            <p>
+              <strong>DOUGLAS C. SLOAN</strong>
+              <br>
+              <em>Research Assistant</em>
+            </p>
+              <ul>
+                <li>Assisted with manufacturing and prototypes of final device</li>
+                <li>Performed experimentation using final prototype</li>
+              </ul>
+          </div>
+        </div>
+        <!--END PROFILE BOX 1-->
+        <!--PROFILE BOX 2-->
+        <div class="profile">
+          <div class="profile_img">
+             <img class="image" src="images/profile4.jpg" alt="image" height="200" width="200">
+          </div>
+          <div class="profile_cont">
+            <p>
+              <strong>DR. JOSEPH A. HAUGER</strong>
+              <br>
+              <em>Physics Professor</em>
+            </p>
+              <ul>
+                <li>Assisted with development of electronic circuits</li>
+                <li>Developed code/programs used to run electronic components</li>
+              </ul>
+            
+          </div>
+        </div>
+        <!--END PROFILE BOX 2-->
+        <!--START PROFILE BOX 3-->
+        <div class="profile">
+          <div class="profile_img">
+             <img class="image" src="images/profile3.jpeg" alt="image" height="200" width="200">
+          </div>
+          <div class="profile_cont">
+            <p>
+              <strong>DR. BRIAN MUNTEAN</strong>
+              <br>
+              <em>Principle Investigator</em>
+            </p>
+              <ul>
+                <li>Assisted with prototype development and experimentation planning</li>
+                <li>Wrote sections of final manuscript</li>
+              </ul>
+          </div>
+        </div>
+        <!--END PROFILE BOX 3-->
+      </div>
+      <!--END RIGHT COLUMN 1-->
+    </div>
+    <!--END ABOUT PAGE FLEXBOX GRID-->
+  </main>
+  </div>
+  <!--END OF WRAPPER-->
+  <!--ABOUT SPECIAL FOOTER-->
+  <div class="abfooter">
+    <footer>
+      Josephine Widjaja &copy;2023
+    </footer>
+  </div>
+  <!--END ABOUT SPECIAL FOOTER-->
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+</body>
+</html>

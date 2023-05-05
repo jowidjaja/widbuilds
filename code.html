@@ -1,0 +1,132 @@
+<!--DOCUMENT SETUP-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+<!--NAVIGATION BAR-->
+  <header>
+ <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  <nav class="nav_links">
+    <input type="checkbox" class="toggle-menu">
+    <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </header>
+<!--END NAVIGATION BAR-->
+  <main>
+    <h1>CODE</h1>
+    <!--FLEXBOX 2-->
+    <div class="grid2">
+      <!--PAGE CONTENT-->
+      <div class="codewhite_border">
+        <div class="codegold_border">
+            <div class="section">
+              <h2>Program</h2>
+              <p><strong>Overview</strong><br> Our custom rotarod device is programmed using the Arduino Integrated Development Environment (IDE) available at no cost at www.arduino.cc. For the purpose of modularity, we have chosen to use two Arduino microcontroller boards for our system as mentioned above. The Arduino MEGA  coordinates the stepper motor movement, LCD panel, LEDs, pushbuttons, toggles/switches, and timing data. Conversely, the Arduino UNO functions to measure voltage output from each of five infrared distance sensors. These voltages vary inversely with distance; when there is no mouse in the light path the voltage is low, but a fallen mouse causes a significant voltage increase. This increase is used to trigger an interrupt signal to the Arduino MEGA which then stops the timing for that particular fallen mouse.  The key components, structures, language used, and brief instructions on set-up are described below.
+              </p>
+              <p><strong>Set-Up</strong><br> To incorporate the code into the Arduino MEGA, connect a laptop device to the USB input on the microcontroller board using an ordinary printer-type cable. Download the free Arduino IDE software (www.arduino.cc) and code found on our GitHub repository linked above. Open the Arduino IDE and copy the Arduino MEGA code into a new sketch. While the microcontroller is connected, select “upload” (arrow button next to the check button). Repeat this procedure for the Arduino UNO. Change output and input pins as needed based upon your wiring strategy.</p>
+            </div>
+            <div class="section">
+              <h2>Main Microcontroller Code</h2>
+              <p>
+                <strong>Overview</strong><br>
+                The main microcontroller code integrates multiple systems to perform rotarod performance tests. This code manages the following tasks:
+              </p>  
+                <ol>
+                  <li>Provides control of the stepper motor movement which is mechanically connected to the rotarod. (The stepper motor and rotarod may have either constant of variable speed depending on the mode of operation selected by the user.)</li>
+                  <li>Enables user mode selection via pushbuttons and an LCD display.</li>
+                  <li>Senses, records, and displays the elapsed time after a mouse has fallen.</li>
+                  <li>Controls LED colors as a visual cue for the user to recognize a fallen mouse. </li>
+                  <li>Integrates a power switch and radius adjusting toggle switch.</li>
+                </ol>
+              
+              <p>
+                <strong>Program Sections</strong><br>
+                <i>Globals</i> - This section contains initializing variables. First, the link to the liquid crystal library along with its corresponding pins can be observed. RGB LED indicator pins are also defined and labelled with a number from 0, 1, 2, 3, 4, and 5 in correlation with one of the six mouse chambers. Other pins for the stepper motor, interrupt pin, pushbuttons, and other timing and state variables are listed in this section. See the comments for additional details. 
+                <br>
+                <br>
+                <i>Interrupt Service Routines</i> - This section includes function calls which the code will execute in response to receiving an interrupt signal from the Arduino UNO system which, as described earlier, detects fallen mice. Any interrupt will cause the program to break out of its normal sequence and carry out the action of the corresponding interrupt service routine. Using interrupts thus allows for the program to sense a fallen mouse or provide an emergency stop by the kill pushbutton while conducting motor rotation and other operations. 
+                <br>
+                <br>
+                <i>void setup()</i> - This section of the program represents the first sequence performed and will execute once at the beginning of the program. Here we define the states of each pin as either output, input, or set it up as an interrupt pin. Thus, it acts as a section to set the initializing terms to the program. Aside from setting up pins, it also contains an optional power up light sequence during the device boot-up (which can be deleted if desired) as well as prints an initial start message on the LCD display.
+                <br>
+                <br>
+                <i>void loop()</i> - The void loop section of the code contains the majority of the program and executes each line of code in order until it reaches its end which causes it to return to the top of the void loop and start over. The beginning of this section is composed of defining initial statements to establish elapsed time and push-button states. This is followed by code that links the cycle button to the LCD display such that different ramping sequences or modes can be cycled through and selected. The main bulk of code is structured in a switch case statement. Within a switch case statement, the program matches up a case with the variable defined in the parenthesis. We defined the variable within the parathesis of switch () as the dynamic variable “mode”. The variable mode is defined by the number of times the cycle pushbutton was pushed, thus allowing the user to control the case (ramping sequence) that would be initiated. Each mode had while loops that had the condition of at least one mouse not fallen or the kill-button not being pressed. 
+              </p>
+                
+            </div>
+            <div class="section">
+              <h2>Secondary Microcontroller Code</h2>
+              <p>
+                <strong>Program Overview</strong>
+                <br>
+                Our Arduino UNO resembles an electronic comparator; it receives inputs from the five infrared distance sensors. When a mouse falls, this voltage increases above a set calibration level at which  the Arduino UNO produces an interrupt to the main Arduino MEGA board. We use the SHARP GP2Y0A02YK0F infrared range sensor (20 cm to 150 cm) which generates an analog voltage signal which varies inversely with distance. Thus, in general, closer objects (like fallen mice) will result in a higher voltage (except if too close to the sensor where the object will induce an inappropriate response) which we use to produce the Arduino MEGA interrupts.
+              </p>
+              <p>
+                <strong>Program Sections</strong>
+                <br>
+                <i>Globals</i> - The globals are defined at the top of program. 
+                <br>
+                <br>
+                <i>void setup()</i> - Here, we set five pins that correspond to each of the five sensors as an output that will send an interrupt signal to the main microcontroller thus signaling an object (mouse) has been detected by that sensor.
+                <br>
+                <br>
+                <i>void loop()</i> - Within the body of the program, we first convert the analog information from the sensor to voltage. The next section includes a digital lowpass filter used to decrease noise spikes that may have resulted in sporadic and undesired triggers. This is followed by the logic that defines the function of the comparator. It states that the processed voltage value, if higher than 2.0V (this number can be manipulated based on the sensitivity of your sensors), then send out an output signal (“high”) by the corresponding pin of the microcontroller to alert a mouse has fallen. This output pin is connected to an interrupt pin on the Arduino MEGA that allows for the program to record the time and alert the user when the mouse has fallen.
+              </p>
+            </div>
+            <div class="section">
+              <h2>Manipulating Program Equations</h2>
+              <p>The NEMA 23 stepper motor functions based on a sequence of electrical pulses that influence a magnetic field which induces precise single step movements that rotates a shaft which in turn is mechanically coupled to the rotarod apparatus. The rate of rotation of the stepper motor shaft and rotarod is determined by the delay time between electrical pulses. A series of calculations for the delay times based on the desired rotarod rotation speed are performed by the Arduino MEGA program. For more information on determining delay time calculations for ramping and static modes, see supplemental titled “Manipulating Program Equations” attached under “code” in our GitHub repository.
+              </p>
+            </div>
+        </div>
+      </div>
+      <!--END PAGE CONTENT-->
+      <!--START RIGHT COLUMN LINK BOX-->
+      <div class="link_box">
+        <h3>Links</h3>
+        <a href="https://github.com/MunteanLab/mouseduino/tree/main/Code" target="_blank">Github</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Code/Arduino_Mega_Code.ino" target="_blank">Arduino MEGA</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Code/Arduino_UNO_Code.ino" target="_blank">Arduino UNO</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Code/Manipulating%20Program%20Equations.pdf" target="_blank">Program Equations</a>
+      </div>
+      <!--END RIGHT COLUMN LINK BOX-->
+    </div>
+    <!--END FLEXBOX2-->
+  </main>
+  </div>
+  <!--END WRAPPER-->
+  <!--FOOTER-->
+  <footer>
+    Josephine Widjaja &copy;2023
+  </footer>
+  <!--END FOOTER-->
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+</body>
+</html>

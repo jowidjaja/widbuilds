@@ -1,0 +1,147 @@
+<!--DOCUMENT SETUP-->
+<!--HI DR.YORK! I've commented throughout all my documents to organize all the sections of my code.
+  The only parts where I got inspo from other people were 
+    1. The cards on the home page at the bottom of the screen (https://getbootstrap.com/docs/5.2/components/card/)
+    2. The hamburger menu from a youtube video (https://www.youtube.com/watch?v=XM7sEpl0f7c)
+    3. The gallery slider thing (IMAGE GALLERY SCROLL INSPIRATAION: https://youtu.be/1fEkWd5hzRY)
+  Everything else, I believe I incorporated myself by just looking up how flexbox/grid/other components work. 
+  Thanks for a great semester! I am actually being commissioned to make websites
+  for my research lab right now and this class is super helpful for that!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+  <header>
+<!--NAVIGATION BAR-->
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+  <div class="bootstrap_logo">
+  <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  </div>
+  <div class="bootstrap_nav">
+  <nav class="nav_links">
+  <input type="checkbox" class="toggle-menu">
+  <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </div>
+<!--END NAVIGATION BAR-->
+  </header>
+<!--PHOTOS ON HOME-->
+  <div class="grid">
+     <div class="homeimg_left"><img class="base expanded" src="images/base1.png" alt="Base"></div>
+     <div class="homeimg_center"><img class="logo" src="images/logo4.png" alt="Text Logo"></div>
+     <div class="homeimg_right"><img class="base" src="images/base2.png" alt="Base"></div>
+  </div>
+<!--END PHOTOS ON HOME-->
+<!--TEXT BOX-->
+  <div class="textbox">
+    <div class="text_center"><strong>OVERVIEW</strong></div>
+    <p>
+      Reliable measurements of motor learning and coordinatization in mice are fundamental aspects of neuroscience research. Despite the advent of deep-learning approaches for motor assessment, performance testing on a rotating rod (rotarod) has remained a staple in the neuroscientist’s toolbox. Surprisingly, commercially available rotarod instruments offer very limited experimental flexibility at a relatively high cost. In order to address these concerns, we engineered a highly-customizable, low-budget rotarod device with increased functionality. Here, we present an extensively detailed guide to assemble this rotarod using simple materials. Our apparatus incorporates a variation of interchangeable rod sizes and designs, which provides for adjustable testing sensitivity. Moreover, our rotarod is driven by open-source software enabling bespoke acceleration ramps and sequences. Finally, we report the strengths and weaknesses of each rod design following multi-day testing on cohorts of C57BL/6 mice. We expect explorations in deviant rod types to provide a foundation for the development of increasingly sensitive models for motor performance testing along with low-budget alternatives for the research community.
+    </p>
+  </div>
+<!--END TEXT BOX-->
+<!--INFORMATION CARDS MADE FROM BOOTSTRAP: https://getbootstrap.com/docs/5.2/components/card/-->
+<!--INFORMATION CARDS-->
+  <div class="blocks">
+    <!--INDIVIDUAL CARD-->
+    <div class="unit_block">
+      <div class="card" style="width: 16rem;">
+      <img src="images/homecode.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">CODE</h5>
+          <p class="card-text">Click here to read about our code.</p>
+          <form action="code.html">
+            <button>LEARN MORE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--INFORMATION CARDS MADE FROM BOOTSTRAP: https://getbootstrap.com/docs/5.2/components/card/-->
+    <!--INDIVIDUAL CARD-->
+    <div class="unit_block">
+      <div class="card" style="width: 16rem;">
+      <img src="images/homeelectronics.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ELECTRONICS</h5>
+          <p class="card-text">Click here to read about our electronics assembly.</p>
+          <form action="electronics.html">
+            <button>LEARN MORE</button>
+          </form>
+          
+        </div>
+       </div>
+    </div>
+    <!--INFORMATION CARDS MADE FROM BOOTSTRAP: https://getbootstrap.com/docs/5.2/components/card/-->
+    <!--INDIVIDUAL CARD-->
+    <div class="unit_block">
+      <div class="card" style="width: 16rem;">
+      <img src="images/homebase.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">BASE</h5>
+          <p class="card-text">Click here to read about our base assembly.</p>
+          <form action="base.html">
+            <button>LEARN MORE</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    <!--INFORMATION CARDS MADE FROM BOOTSTRAP: https://getbootstrap.com/docs/5.2/components/card/-->
+    <!--INDIVIDUAL CARD-->
+    <div class="unit_block">
+      <div class="card" style="width: 16rem;">
+      <img src="images/homerod.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ROD</h5>
+          <p class="card-text">Click here to read about our rod assembly.</p>
+          <form action="rod.html">
+            <button>LEARN MORE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--END INFORMATION CARDS-->
+  </div>
+<!--END OF WRAPPER-->
+<!--FOOTER-->
+  <footer>
+    Josephine Widjaja &copy;2023
+  </footer>
+<!--END OF FOOTER-->
+<!--JAVASCRIPT-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+<!--END JAVASCRIPT-->
+</body>
+</html>

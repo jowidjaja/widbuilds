@@ -1,0 +1,129 @@
+<!--DOCUMENT SETUP-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+<!--NAVIGATION BAR-->
+  <header>
+  <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  <nav class="nav_links">
+    <input type="checkbox" class="toggle-menu">
+    <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </header>
+<!--END NAVIGATION BAR-->
+  <main>
+    <h1>BASE ASSEMBLY</h1>
+    <!--FLEXBOX 2 // PARENT: GRID2 // CHILD: LEFT_COLUMN & RIGHT_COLUMN-->
+    <div class="grid2">
+      <!--START LEFT COLUMN - MAIN CONTENT-->
+      <div class="left_column">
+        <!--IMAGE GALLERY SCROLL INSPIRATAION: https://youtu.be/1fEkWd5hzRY-->
+        <!--IMAGE GALLERY-->
+        <div class="gallery_container">
+          <div class="arrows">
+            <button class="iconl" onclick="scrolll()"><i class="fa fa-angle-double-left"></i></button>
+          </div>
+          <div class="gallery">
+            <div class="gallery_img">
+              <a href="images/basep1.png" data-fancybox="gallery" data-caption="Figure 1A. Non-expanded CAD modeled view of the base and rod assembly along with mouse capture boxes, electronic components not shown.">
+                <img class="image" src="images/basep1.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 1A</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/basep2.png" data-fancybox="gallery" data-caption="Figure 1B. Expanded view of the twelve laser-cut parts of CAD modeled base, location of electronic components within the device are labeled. An expanded view of rod assembly components without the horizontal barriers is also shown. Assembly displays the ten-additional 3D printed components (not including the rod), five nuts, and two-winged nuts.">
+                <img class="image" src="images/basep2.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 1B</div>
+            </div>
+          </div>
+          <div class="arrows">
+            <button class="iconr" onclick="scrollr()"><i class="fa fa-angle-double-right"></i></button>
+          </div>
+        </div>
+        <!--END IMAGE GALLERY-->
+        <!--START PAGE CONTENT-->
+        <div class="white_border">
+          <div class="gold_border">
+              <div class="section">
+                <h2>Overview</h2>
+                <p>
+                  The base, or main frame of the custom rotarod device, was synthesized from 1/8th inch acrylic cut to form the individual base parts through laser-cutting technology (Figure 1A). The base assembly is formed from twelve unique parts (not including the mouse capture boxes and tracks) that function to mount the sensors, LCD panels, motor, LEDs, pushbuttons, fan, and switches (Figure 1B). An overview of these parts, their relative dimensions, and CAD/laser cut files can be found as referenced below in the supplemental documents and on our GitHub repository (https://github.com/MunteanLab/mouseduino). The base contains a hinged lid and back panel that allows for easy access to relevant electrical components. These articulations are formed through an attachment of hinges, nuts, and bolts. A full description of materials can be seen in Table 1. Acrylic parts were bonded through superglue though we recommend utilizing an acrylic bonding material for more resiliency and strength. To clean the acrylic panels, we recommend utilizing bleach-based products such as Clorox. To keep waste products from falling into the device while the lid was opened, tape was used to cover spaces formed between the Lid Top Part A and Front Top part (see supplemental for referenced part names) during the opening of the lid. Additional views and perspectives of the design are presented in Figure S1. Assembly of the individual base parts can be seen in  Figures S2 and S3. 
+                </p>
+              </div>
+              <div class="section">
+                <h2>Mouse Capture Boxes</h2>
+                <p>
+                  We developed open-top boxes from 1/8th inch acrylic composed of four laser cut pieces. To these boxes, four plastic wheels were superglued onto the acrylic. Each pair of the plastic wheels, placed both on the front and back ends of the capture box, was separated by a little over andinch to accommodate for a 1-inch acrylic track that was attached to the hinging lid (Lid Top Part A) of the base assembly. Dimensions for the position of the tracks on the lid along with additional capture box assembly instruction can be found in Figure S4 as well as at our GitHub repository (https://github.com/MunteanLab/mouseduino). The bottom of the capture box was lined with a piece of foamboard wrapped with packaging tape. An additional removable layer of paper was added to catch waste throughout the experiment. This contaminated layer was removed after each use.
+                </p>
+              </div>
+          </div>
+        </div>
+        <!--END PAGE CONTENT-->
+      </div>
+      <!--END LEFT COLUMN - MAIN CONTENT-->
+      <!--START RIGHT COLUMN - LINK BOX-->
+      <div class="link_box">
+        <h3>Links</h3>
+        <a href="https://github.com/MunteanLab/mouseduino/tree/main/Base%20Assembly/Inventor%20Files" target="_blank">Inventor Files</a>
+        <a href="https://github.com/MunteanLab/mouseduino/tree/main/Base%20Assembly/Laser%20Cutting%20Files" target="_blank">Laser Cutting Files</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Base%20Assembly/Base%20Assembly%20Guide.pdf" target="_blank">Base Assembly Guide</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Base%20Assembly/Base%20Assembly%20Materials%20Info.xlsx" target="_blank">Base Materials</a>
+
+      </div>
+      <!-- END RIGHT COLUMN - LINK BOX-->
+    </div>
+    <!--END FLEXBOX2-->
+  </main>
+  </div>
+  <!--END WRAPPER-->
+  <!--FOOTER START-->
+  <footer>
+    Josephine Widjaja &copy;2023
+  </footer>
+  <!--FOOTER END-->
+  
+  <!--START JAVASCRIPT-->
+  <script>
+  function scrolll(){
+    var left = document.querySelector(".gallery");
+    left.scrollBy(-100,0)
+  }
+  function scrollr(){
+    var right = document.querySelector(".gallery");
+    right.scrollBy(100,0)
+  }
+  </script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+  <!--END JAVASCRIPT-->
+  
+</body>
+</html>

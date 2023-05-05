@@ -1,0 +1,136 @@
+<!--DOCUMENT SETUP-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+<!--NAVIGATION BAR-->
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+  <header>
+  <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  <nav class="nav_links">
+    <input type="checkbox" class="toggle-menu">
+    <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </header>
+<!--END NAVIGATION BAR-->
+  <main>
+    <h1>ROD ASSEMBLY</h1>
+    <!--FLEXBOX 2-->
+    <div class="grid2">
+      <!--START OF LEFT COLUMN: PAGE CONTENT-->
+      <div class="left_column">
+        <!--IMAGE GALLERY SCROLL INSPIRATAION: https://youtu.be/1fEkWd5hzRY-->
+        <!--START OF GALLERY-->
+        <div class="gallery_container">
+          <div class="arrows">
+            <button class="iconl" onclick="scrolll()"><i class="fa fa-angle-double-left"></i></button>
+          </div>
+          <div class="gallery">
+            <div class="gallery_img">
+              <a href="images/rod1.png" data-fancybox="gallery" data-caption="Figure 2A. Expanded CAD modeled view displaying components for the rod consisting of six 3D printed components secured through super-glue and two 5/16th bolts.">
+                <img class="image" src="images/rod1.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 2A</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/rod2.png" data-fancybox="gallery" data-caption="Figure 2B. Components of the rod attachments.">
+                <img class="image" src="images/rod2.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 2B</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/rod3.png" data-fancybox="gallery" data-caption="Figure 2C. Non-expanded view of complete rod assembly.">
+                <img class="image" src="images/rod3.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 2C</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/rod4.png" data-fancybox="gallery" data-caption="Figure 2D. Various drums sizes and diameters made for use with our interchangeable rod model.">
+                <img class="image" src="images/rod4.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 2D</div>
+            </div>
+          </div>
+          <div class="arrows">
+            <button class="iconr" onclick="scrollr()"><i class="fa fa-angle-double-right"></i></button>
+          </div>
+        </div>
+        <!--END OF GALLERY-->
+        <!--START OF WRITTEN CONTENT-->
+        <div class="white_border">
+          <div class="gold_border">
+              <div class="section">
+                <h2>Overview</h2>
+                <p>
+                  Utilizing 3D-printing and laser-cutting tools, we synthesized a custom rod that holds detachable and interchangeable rod drum sizes and shapes (Figure 2A). Our 3D-printed parts were made from standard polylactic acid (PLA) 3D-printer filament. 3D-printed files were created using AutoDesk Inventor, a computer design application for 3D modeling and visualization, and were printed by a local printing facility. Our rod design has a cuboid shaft designed for homologous rotation of the rod attachments. It consists of four 3D-printed parts that lock through male and female ends. To each end of the rod, a cuboid end piece with a hole accommodating a 5-inch 5/16 bolt was superglued. The bolts were oriented such that the body of the nut faced the external side of the rod and the head of the nut was embedded in the interior. Five of the various 3D-printed rod attachments (small or large/plain or laddered) and six laser-cut circular chamber dividers were placed onto the rod in an alternating fashion (divider-rod attachment-divider-rod attachment. . .) with clear dividers located at the ends to accommodate future modifications (Figures 2B and 2C). These parts were secured with a 3D-printed end cap. The rotating capabilities of the rod was synthesized by threading the 5-inch bolt into a ball bearing nested and superglued into a 3D printed component (termed “bearing holders”). These bearing holders consist of two separate units joined together by two M5 nuts and their corresponding bolts. Aside from enabling rotation, these holders also attach and suspend the rod assembly to the main frame of the device. 
+                </p>
+                <p>
+                  The static end of the rod (the right end as seen on Figure 2B), contains a pulley part (labeled as “top pulley” in our GitHub repository) with embedded bolts that connect the rod assembly to the motor that also holds a 3D-printed pulley attachment on its hub ("bottom pulley”). The pulley part consists of a 5/16th nut embedded into a 3D printed part, thus allowing it to be screwed onto the 5/16th bolt protruding from the main body of the rod. The dynamic end (the left end as seen on Figure 2B), was used to access and interchange the rod attachments through unscrewing attached nuts and sliding rod components off the shaft. To the static end, these items were attached following the end cap (listed from most interior to exterior position): a 5/16th bolt, the bearing assembly, three 5/16th bolts, the pulley part, and one winged nut. To the dynamic end, the following was attached following the end cap: one 5/16th nut, the bearing part, and one winged nut. A complete list of the materials used to synthesize the rod assembly can be observed in Table 1. 
+                </p>
+                <p>
+                  A core innovation in our rotarod is  the ability to interchange various rod designs. Here we describe two different drum sizes for two unique models (laddered and unladdered) (Figure 2D and Figure S5). The small unladdered design contains a 4.445 cm diameter, which reflects a typical size range utilized in many commercial applications. We also included a larger diameter drum (10.16 cm), which we hypothesized may provide additional challenge and thus sensitivity to motor learning. Finally, we describe a laddered version of both rods (small and large) that requires animals to specifically grab onto the rung rather than at a random placement. 3D printing, laser cutting files, images, and supplementals with more information on the rod assembly can be accessed at our GitHub repository mentioned above. Our current assembly can accommodate rod drums of 1.5 inch and greater. However, this can be adapted by creating a smaller rod shaft through 3D printing technology if smaller drum sizes are desired.
+                </p>
+              </div>
+          </div>
+        </div>
+        <!--END OF WRITTEN CONTENT-->
+      </div>
+      <!--START OF LEFT COLUMN: LINK BOX-->
+      <div class="link_box">
+        <h3>Links</h3>
+        <a href="https://github.com/MunteanLab/mouseduino/tree/main/Rod%20Assembly/Inventor%20Files" target="_blank">3D Printing Files</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Rod%20Assembly/Rod%20Attachment%20Dimensions.pdf" target="_blank">Rod Attachments</a>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Rod%20Assembly/Rod%20Assembly%20Material%20Info.xlsx" target="_blank">Rod Materials</a>
+      </div>
+      <!--END OF RIGHT COLUMN: LINK BOX-->
+    </div>
+    <!--END FLEXBOX 2-->
+  </main>
+  </div>
+  <!--END OF WRAPPER-->
+  <!--START OF FOOTER-->
+  <footer>
+    Josephine Widjaja &copy;2023
+  </footer>
+  <!--END OF FOOTER-->
+  <!--START OF JAVASCRIPT-->
+  <script>
+  function scrolll(){
+    var left = document.querySelector(".gallery");
+    left.scrollBy(-100,0)
+  }
+  function scrollr(){
+    var right = document.querySelector(".gallery");
+    right.scrollBy(100,0)
+  }
+  </script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+  <!--END OF JAVASCRIPT-->
+</body>
+</html>

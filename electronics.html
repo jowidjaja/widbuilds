@@ -1,0 +1,192 @@
+<!--DOCUMENT SETUP-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale-1"/>
+  <title>WidBuilds</title>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet" href="widbuilds.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--END DOCUMENT SETUP-->
+
+<body>
+<!--START OF WRAPPER-->
+  <div id="wrapper">
+<!--RESPONSIVE HAMBURGER MENU WITHOUT SCRIPT: https://www.youtube.com/watch?v=XM7sEpl0f7c-->
+<!--NAVIGATION BAR-->
+  <header>
+  <a href="index.html"><img class="logo" src="images/logo1.png" alt="Plain Logo" width="175"></a>
+  <nav class="nav_links">
+    <input type="checkbox" class="toggle-menu">
+    <div class="hamburger"></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="electronics.html">Electronics</a></li>
+      <li><a href="base.html">Base</a></li>
+      <li><a href="rod.html">Rod</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </header>
+<!--END NAVIGATION BAR-->
+  <main>
+    <h1>ELECTRONICS ASSEMBLY</h1>
+    <!--FLEXBOX 2-->
+    <div class="grid2">
+      <!--START OF LEFT COLUMN: PAGE CONTENT-->
+      <div class="left_column">
+        <!--IMAGE GALLERY SCROLL INSPIRATAION: https://youtu.be/1fEkWd5hzRY-->
+        <!--START OF GALLERY-->
+        <div class="gallery_container">
+          <div class="arrows">
+            <button class="iconl" onclick="scrolll()"><i class="fa fa-angle-double-left"></i></button>
+          </div>
+          <div class="gallery">
+            <div class="gallery_img">
+              <a href="images/elec1.png" data-fancybox="gallery" data-caption="Figure 3A. Color-coded breadboard schematic with associated electrical components. Each color represents the general region of attachment of the component to the breadboard.">
+                <img class="image" src="images/elec1.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 3A</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec2.png" data-fancybox="gallery" data-caption="Figure 3B. Wiring diagram of breadboard with schematic (top) and example of an assembled board (bottom).">
+                <img class="image" src="images/elec2.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 3B</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec3.png" data-fancybox="gallery" data-caption="Figure 3C. Arduino MEGA, main-microcontroller, pin-attachment schematic.">
+                <img class="image" src="images/elec3.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 3C</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec4.png" data-fancybox="gallery" data-caption="Figure 3D. Arduino UNO, secondary microcontroller, pin-attachment schematic.">
+                <img class="image" src="images/elec4.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 3D</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec5.png" data-fancybox="gallery" data-caption="Figure 4A. Wiring of power supply and related switches, stepper motor attachments, fan, radius switch, and relevant connections to associated microcontrollers.">
+                <img class="image" src="images/elec5.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 4A</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec6.png" data-fancybox="gallery" data-caption="Figure 4B. Wiring diagram of pushbuttons and relevant connections to associated microcontrollers. LEDs in this diagram are representative of the light-related connectors within the pushbutton not shown in the pushbutton image.">
+                <img class="image" src="images/elec6.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 4B</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec7.png" data-fancybox="gallery" data-caption="Figure 4C. Wiring diagram of LCD panel and associated microcontroller connections. D, Wiring diagram of sensors and associated microcontroller connections.">
+                <img class="image" src="images/elec7.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 4C</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec8.png" data-fancybox="gallery" data-caption="Figure 4D. Wiring diagram of sensors and associated microcontroller connections.">
+                <img class="image" src="images/elec8.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 4D</div>
+            </div>
+            <div class="gallery_img">
+              <a href="images/elec9.png" data-fancybox="gallery" data-caption="Figure 4E. Wiring diagram of RGB LEDs and associate microcontroller connections.">
+                <img class="image" src="images/elec9.png" alt="image" height="250">
+              </a>
+              <div class="img_caption">Figure 4E</div>
+            </div>
+          
+          </div>
+          <div class="arrows">
+            <button class="iconr" onclick="scrollr()"><i class="fa fa-angle-double-right"></i></button>
+          </div>
+        </div>
+        <!--END OF GALLERY-->
+        <!--START OF WRITTEN CONTENT-->
+        <div class="white_border">
+          <div class="gold_border">
+              <div class="section">
+                <h2>Overview</h2>
+                <p>
+                  The electronics assembly integrates user input and measurement output and includes seven main components as shown in Figure 3A and described separately in the sections below. The main components were connected using several through-hole solder boards, 24 gauge solid and stranded wires, terminal blocks and custom-made Dupont connecting wires. See Figure 3B for breadboard connection diagrams and Figure 3C for a brief overview of the microcontroller pin connections. Specific wiring diagrams can be seen in Figure 4. These figures show the additional wiring connections relative to the breadboard connection diagram in Figure 3B. A list of parts and materials can be found in Table 2 (also at https://github.com/MunteanLab/mouseduino). 
+                </p>
+              </div>
+              <div class="section">
+                <h2>Component Power</h2>
+                <p>
+                  A 5VDC, 3A Meanwell RS-15-5 is used to power the Arduino Uno and Arduino MEGA boards (Figure 4A). The power supply is connected to the ground and Vin connections on each microcontroller board. This power supply also drives the 5V cooling fan (optional) we have installed in the device enclosure. The DM860A stepper motor controller receives power from a separate 12VDC, 8.5A Meanwell RS-100-12. This power is delivered directly to the stepper motor coils via terminal block connections on the motor controller housing. The power supplies are connected in parallel to line voltage through an ordinary 3-prong power cord. The power to the entire system is controlled by a 20A toggle switch. 
+                </p>
+              </div>
+              <div class="section">
+                <h2>Stepper Motor</h2>
+                <p>A NEMA-23 bipolar stepper motor is used to drive the rotarod apparatus (Figure 4A). A non-slipping belt connects the stepper motor timing pulley to the 3D printed pulley mounted on the rotarod axle. The stepper’s four leads are connected directly to the output terminal blocks of the stepper motor controller which causes the stepper to rotate or “step” in response to pulses received from the Arduino MEGA. The rotation rate is determined by the rate of these pulses. Additional details are included in the section describing  Arduino MEGA programming. The stepper motor controller is powered by the 12VDC power supply mentioned above.  
+                </p>
+              </div>
+              <div class="section">
+                <h2>User Input Pushbuttons</h2>
+                <p>Three 1-inch diameter lighted pushbuttons provide user input to the rotarod system. These three buttons are used to select one of six testing modes, to start a test, to override the program or to stop a test. Repeated pressing on the mode selection button cycles the user through the six testing modes – when the user sees the desired mode displayed on the liquid crystal display (LCD), pressing the start button begins the test in the selected mode. The test continues until the total time expires, all mice have fallen, or the stop button is pushed. At the completion of the test, the elapsed time or latency for each mouse is displayed on the LCD. The mode selection and start buttons are illuminated with internal white LEDs. The stop button is illuminated with an internal red LED. Each button is appropriately labeled on the enclosure. Wiring schematics for the user input pushbuttons can be seen in Figure 4B.
+                </p>
+              </div>
+              <div class="section">
+                <h2>Sensors, Indicators, and Liquid Crystal Display</h2>
+                <p>Our device uses five infrared range sensors to simultaneously test up to five mice. Each range sensor is interfaced to an on-board 10-bit analog to digital converter on the Arduino UNO microcontroller board. These sensors, which are mounted at the end of each testing lane, produce a voltage that varies approximately inversely with distance. Thus, a fallen mouse will cause the corresponding sensor’s output voltage to surge. These voltages are continuously polled by the Arduino UNO and if such a voltage increase is detected, a digital output line on the Arduino UNO is taken high. This digital input is connected to an interrupt input pin on the Arduino MEGA. When the interrupt signal is received, the Arduino MEGA stops the timing on that particular mouse and stores that time for display at the end of the testing. In addition, the Arduino MEGA changes the RGB LED indicator for that testing lane from its normal white color to red. There is an RGB LED indicator for each testing lane integrated to alert testing progress to the user. We have also interfaced a 20x4 liquid crystal display to the Arduino MEGA. This display is used during testing mode selection and also displays the elapsed time of each mouse at the end of each testing session. The LCD is panel mounted to an opening in the enclosure. The LCD, sensor, and RGB LED wiring diagrams can be seen in Figures 4C, 4D, and 4E, respectively. 
+                </p>
+              </div>
+              <div class="section">
+                <h2>The Arduino UNO</h2>
+                <p>
+                  The Arduino UNO microcontroller is used to monitor the output voltage of our five infrared range sensors. We use five on-board analog to digital converters for this purpose. If the input voltage of any sensor increases above a threshold, this board will set a digital output line high. This digital output is used as an interrupt by the Arduino MEGA described next. To avoid artificially triggering interrupts by noisy voltage signals, a digital low-pass filter is employed. The Arduino UNO is powered via its Vin pin from our 5VDC power supply mentioned above. Specific pin connections can be observed in Table 3.
+                </p>
+              </div>
+              <div class="section">
+                <h2>The Arduino MEGA</h2>
+                <p>
+                  The Arduino MEGA is the more capable microcontroller board than the Arduino UNO with a greater number of input/output pins and memory capacity. The three user-controlled push buttons are connected to this board for initial mode selection and to start each test. The Arduino MEGA also controls the stepper motor movement by sending timed pulses to the stepper motor controller at pre-determined intervals. The Arduino MEGA also communicates with the LCD before, during, and after testing. Importantly, the Arduino MEGA measures latency to fall times for each mouse and reports this time to the LCD either at the end of the test or when the user presses the stop button. Timing for fallen mice is measured based on interrupts received from the Arduino UNO as described above. The Arduino MEGA is powered via its Vin pin from our 5VDC power supply mentioned previously. The specific pin connection can be observed in Table 3. Program/Code
+                </p>
+              </div>
+          </div>
+        </div>
+        <!--END OF WRITTEN CONTENT-->
+      </div>
+      <!--START OF LEFT COLUMN: LINK BOX-->
+      <div class="link_box">
+        <h3>Links</h3>
+        <a href="https://github.com/MunteanLab/mouseduino/blob/main/Electronics%20Assembly/Electronics%20Materials%20List.xlsx" target="_blank">Electronics Materials</a>
+      </div>
+      <!--END OF RIGHT COLUMN: LINK BOX-->
+    </div>
+    <!--END FLEXBOX 2-->
+  </main>
+  </div>
+  <!--END OF WRAPPER-->
+  <!--START OF FOOTER-->
+  <footer>
+    Josephine Widjaja &copy;2023
+  </footer>
+  <!--END OF FOOTER-->
+  <!--START OF JAVASCRIPT-->
+  <script>
+  function scrolll(){
+    var left = document.querySelector(".gallery");
+    left.scrollBy(-100,0)
+  }
+  function scrollr(){
+    var right = document.querySelector(".gallery");
+    right.scrollBy(100,0)
+  }
+  </script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+  </script>
+  <!--END OF JAVASCRIPT-->
+</body>
+</html>
